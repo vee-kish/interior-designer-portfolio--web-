@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#303030",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "on-surface-variant": "#414943",
+                    "secondary": "#735c00",
+                    "inverse-primary": "#a2d1b7",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-background": "#1b1b1b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e4cc",
+                    "on-secondary-container": "#745c00",
+                    "background": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#2a2c1c",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-container": "#92937e",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-primary-container": "#6f9c84",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#bdedd2",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "primary-fixed-dim": "#a2d1b7",
+                    "on-primary-fixed": "#002113",
+                    "primary": "#001b0f",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#013220",
+                    "outline-variant": "#c1c8c2",
+                    "outline": "#717973",
+                    "tertiary": "#161709",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface": "#1b1b1b",
+                    "surface-tint": "#3b6751",
+                    "on-primary-fixed-variant": "#234f3b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Noto Serif"],
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "display-lg": ["Noto Serif"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-glow {
+            box-shadow: 0 20px 40px -15px rgba(1, 50, 32, 0.08);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200 shadow-sm flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span id="menu-btn" class="material-symbols-outlined text-emerald-900" style="cursor:pointer;">
+    menu
+</span>
+
+<nav id="menu" class="hidden">
+    <ul>
+        <li><a href="Homepagemob.html">Home</a></li>
+        <li><a href="Aboutdesignermob.html">About</a></li>
+        <li><a href="Contactmob.html">Contact</a></li>
+        <li><a href="Portfoliomob.html">Portfolio</a></li>
+        <li><a href="Servicemob.html">Service</a></li>
+    </ul>
+</nav>
+
+<style>
+    #menu {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        /* Added this to make sure it stays on top of other content */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    #menu {
+  /* This makes it semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); 
+  
+  /* This creates the "frosting" blur effect on the background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  
+  /* A thin white border makes the glass edge pop */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  color: #111; /* Dark text usually looks better on glass */
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+/* Let's make the links look better on the glass background */
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #064e3b; /* Matches your emerald-900 icon color */
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+/* Add this to your #menu */
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+/* Adjust your .hidden class slightly */
+.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+</style>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+        // Use 'sideMenu' here because that's what you named the variable above
+        sideMenu.classList.toggle('hidden');
+    });
+</script>
+<span class="text-lg font-serif font-bold tracking-widest text-emerald-950">AMANI INTERIORS</span>
+</div>
+<button class="bg-primary-container text-on-primary px-5 py-2 font-label-caps text-xs rounded-full active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates" target="_blank">
+  Book Now
+</a>
+        </button>
+</header>
+<main class="pt-24 pb-16">
+<!-- Hero Section -->
+<section class="px-6 mb-12">
+<span class="font-label-caps text-secondary uppercase tracking-[0.2em] block mb-4">Investment</span>
+<h1 class="font-headline-xl text-primary mb-6">Pricing &amp; Packages</h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                Transparent investment for intentional spaces. We offer curated paths to transform your residence into a sanctuary of modern African elegance.
+            </p>
+</section>
+<!-- Swipeable Package Carousel -->
+<section class="mb-16">
+<div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar px-6 gap-6 pb-8">
+<!-- Package Card: Basic Consultation -->
+<div class="flex-none w-[85vw] snap-center bg-white rounded-lg border border-stone-100 ambient-glow overflow-hidden flex flex-col">
+<div class="h-48 relative">
+<img alt="Interior consultation" class="w-full h-full object-cover" data-alt="Modern minimalist living room with warm sunlight, a single armchair, and high-end Kenyan pottery on a side table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDErkYyPnvT4QJGbIOivGRj-HzLRtOQh8PEKE5cep-lTiN8xP0xxhK77LA2GKsyOVpRMw9pNyV-g7ZO2AVHKpzDDakqDbV9RsxMTGLU8l8_JquYKS0AESZYGcNE-wZOjb3yCMxnDop_UFpSFUqqQFPoGihNPl4BycmHKHfvu8EURduBsY7eU0qHks8xEag6wLBFce5-H4_gzw5W0hBH8Zm8DqNynziPx2pFbFoNwztwBZbN30-stKtfNMPQujeqIWjxKBJTk5LyeW2u"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-transparent opacity-60"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="font-label-caps text-secondary mb-2">Focused Advice</span>
+<h3 class="font-headline-md text-primary mb-4">Basic Consultation</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+                            A 2-hour intensive session to refine your vision, select color palettes, and solve specific spatial challenges.
+                        </p>
+<div class="mb-8">
+<span class="font-headline-md text-primary">KSh 15,000</span>
+<span class="text-on-surface-variant font-label-caps ml-2">/ Session</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Color Palette Curation</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Furniture Placement Review</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Sourcing Recommendations</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-container text-white font-label-caps uppercase tracking-widest rounded-lg active:scale-[0.98] transition-all">
+                            Book This Package
+                        </button>
+</div>
+</div>
+<!-- Package Card: Design Concept -->
+<div class="flex-none w-[85vw] snap-center bg-white rounded-lg border border-stone-100 ambient-glow overflow-hidden flex flex-col">
+<div class="h-48 relative">
+<img alt="Design concept moodboard" class="w-full h-full object-cover" data-alt="Close-up of high-quality fabric swatches in earth tones, wood samples, and a minimalist architectural drawing on a stone desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjSnKmNm9HU-3goCKSkP06OavoK3wD_Y6hTIw2iIBRubc4SMaF0CNv3O2ANK41fIyA8o3oCeji9QA0hnqs7y-zUkeWz_pbkbMbVETYavpj0HFfwS6fznl1S4_zK3q5pH6OvvyiqEdfQTPA7nvdlE1slmBhDEKj17YBoMTBbHMsczgcD8tozegRPPAaoNa5nyjGKO7jldoJOljYUqbpkV9hr8nqszsuOxmKSFBcWxlbvrUYPfgK6v7Rj_VElnW5VkDBdFOLaWSnOcAZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-transparent opacity-60"></div>
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-fixed px-3 py-1 font-label-caps text-[10px] rounded-full">MOST POPULAR</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="font-label-caps text-secondary mb-2">Visual Roadmap</span>
+<h3 class="font-headline-md text-primary mb-4">Design Concept</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+                            Comprehensive visual blueprint for one room, including 3D renders and a curated shopping list for DIY execution.
+                        </p>
+<div class="mb-8">
+<span class="font-headline-md text-primary">KSh 45,000</span>
+<span class="text-on-surface-variant font-label-caps ml-2">/ Room</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Photo-Realistic 3D Renders</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Material &amp; Lighting Board</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Full Product Sourcing List</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-container text-white font-label-caps uppercase tracking-widest rounded-lg active:scale-[0.98] transition-all">
+                            Book This Package
+                        </button>
+</div>
+</div>
+<!-- Package Card: Full Transformation -->
+<div class="flex-none w-[85vw] snap-center bg-white rounded-lg border border-stone-100 ambient-glow overflow-hidden flex flex-col">
+<div class="h-48 relative">
+<img alt="Luxury interior" class="w-full h-full object-cover" data-alt="Wide angle shot of a luxury penthouse interior with floor to ceiling windows, bespoke dark wood cabinetry, and elegant Kenyan textiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfLPqjOyIYfKyFjGxM6G2IIOSl174pVShHUi_dBZfutL-BfYmx3Y2RJ-t-aVqx40Ct50LM-DXAYgdImAdG0TlFoW5uWevh8vT8v3hdMc5npRWca231HbzQumWeoXYdKSF2zksQ0xzYi_AunK0zf_DGLDCmJydsGrPAQIzWlvG-Rfn66QgEOMD-x2qtikCh99_egF2D9B6bbY4YSKPWJ-Sfj0z2415Ba700x2ZCVg6p1OvoRIyT1jUU0vCmlcPKW0OLICIr7amLtfcu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white via-transparent opacity-60"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="font-label-caps text-secondary mb-2">Turnkey Luxury</span>
+<h3 class="font-headline-md text-primary mb-4">Full Transformation</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-grow">
+                            End-to-end management from concept to installation. We handle vendors, craftsmanship, and final styling.
+                        </p>
+<div class="mb-8">
+<span class="font-headline-md text-primary">Custom Quote</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Project Management</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Bespoke Furniture Design</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">On-Site Installation</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-container text-white font-label-caps uppercase tracking-widest rounded-lg active:scale-[0.98] transition-all">
+                            Book This Package
+                        </button>
+</div>
+</div>
+</div>
+<!-- Swipe Indicator -->
+<div class="flex justify-center gap-2 mt-4">
+<div class="w-8 h-1 bg-primary-container rounded-full"></div>
+<div class="w-2 h-1 bg-stone-300 rounded-full"></div>
+<div class="w-2 h-1 bg-stone-300 rounded-full"></div>
+</div>
+</section>
+<!-- Bespoke Section -->
+<section class="mx-6 p-8 bg-stone-100 rounded-lg text-center relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline-md text-primary mb-4">Need something bespoke?</h4>
+<p class="font-body-md text-on-surface-variant mb-8">
+                    Every project is unique. If our standard packages don't align with your vision, let's create a custom scope of work tailored to your specific needs.
+                </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-caps border-b border-primary pb-1 active:opacity-60 transition-opacity" href="#">
+                    START A CONVERSATION
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full pt-16 pb-8 bg-stone-100 border-t border-stone-200">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+<div class="font-serif italic text-stone-800 text-xl mb-4 md:mb-0">Amani</div>
+<div class="flex gap-6 mb-8 md:mb-0">
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-emerald-900 underline decoration-amber-600 transition-all" href="#">Instagram</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-emerald-900 underline decoration-amber-600 transition-all" href="#">LinkedIn</a>
+</div>
+<div class="font-serif text-sm tracking-wide text-stone-600 text-center">
+                © 2024 Amani Interiors. Crafted in Kenya.
+            </div>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="font-serif text-sm tracking-wide text-stone-500" href="#">Privacy</a>
+<a class="font-serif text-sm tracking-wide text-stone-500" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-stone-50/90 backdrop-blur-md border-t border-stone-200 flex justify-around items-center py-3 z-50">
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined text-2xl" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] font-label-caps">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-emerald-900 font-semibold">
+<span class="material-symbols-outlined text-2xl" data-icon="architecture" data-weight="fill" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<span class="text-[10px] font-label-caps">Services</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] font-label-caps">Studio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined text-2xl" data-icon="mail">mail</span>
+<span class="text-[10px] font-label-caps">Contact</span>
+</div>
+</nav>
+</body></html>

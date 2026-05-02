@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book a Consultation | AMANI INTERIORS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-surface": "#303030",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "on-surface-variant": "#414943",
+                        "secondary": "#735c00",
+                        "inverse-primary": "#a2d1b7",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "on-background": "#1b1b1b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e4e4cc",
+                        "on-secondary-container": "#745c00",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#2a2c1c",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#92937e",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-primary-container": "#6f9c84",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed": "#bdedd2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "primary-fixed-dim": "#a2d1b7",
+                        "on-primary-fixed": "#002113",
+                        "primary": "#001b0f",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#013220",
+                        "outline-variant": "#c1c8c2",
+                        "outline": "#717973",
+                        "tertiary": "#161709",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#1b1b1b",
+                        "surface-tint": "#3b6751",
+                        "on-primary-fixed-variant": "#234f3b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { border-color: #013220; color: #013220; }
+        .step-inactive { border-color: #e2e2e2; color: #717973; }
+        input:focus, textarea:focus { outline: none; border-bottom-color: #013220 !important; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="text-emerald-900 dark:text-emerald-50 active:scale-95 transition-transform">
+<span id="menu-btn" class="material-symbols-outlined text-emerald-900" style="cursor:pointer;">
+    menu
+</span>
+
+<nav id="menu" class="hidden">
+    <ul>
+        <li><a href="Homepagemob.html">Home</a></li>
+        <li><a href="Aboutdesignermob.html">About</a></li>
+        <li><a href="Contactmob.html">Contact</a></li>
+        <li><a href="Portfoliomob.html">Portfolio</a></li>
+        <li><a href="Servicemob.html">Service</a></li>
+    </ul>
+</nav>
+
+<style>
+    #menu {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        /* Added this to make sure it stays on top of other content */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    #menu {
+  /* This makes it semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); 
+  
+  /* This creates the "frosting" blur effect on the background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  
+  /* A thin white border makes the glass edge pop */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  color: #111; /* Dark text usually looks better on glass */
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+/* Let's make the links look better on the glass background */
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #064e3b; /* Matches your emerald-900 icon color */
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+/* Add this to your #menu */
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+/* Adjust your .hidden class slightly */
+.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+</style>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+        // Use 'sideMenu' here because that's what you named the variable above
+        sideMenu.classList.toggle('hidden');
+    });
+</script>
+</button>
+<h1 class="text-lg font-serif font-bold tracking-widest text-emerald-950 dark:text-stone-100">AMANI INTERIORS</h1>
+<div class="w-10"></div> <!-- Spacer for balance -->
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates"target="_blank">
+            Book Now </a>
+        </button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-5 max-w-lg mx-auto">
+<!-- Progress Indicator -->
+<div class="flex justify-between items-center mb-10 px-4">
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 flex items-center justify-center font-label-caps step-active bg-primary-container text-white border-primary-container">1</div>
+<span class="font-label-caps text-[10px] text-primary">SERVICE</span>
+</div>
+<div class="h-[1px] flex-1 bg-outline-variant mb-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 flex items-center justify-center font-label-caps step-inactive">2</div>
+<span class="font-label-caps text-[10px] text-outline">DATETIME</span>
+</div>
+<div class="h-[1px] flex-1 bg-outline-variant mb-6"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 flex items-center justify-center font-label-caps step-inactive">3</div>
+<span class="font-label-caps text-[10px] text-outline">DETAILS</span>
+</div>
+</div>
+<!-- Step 1: Select Service -->
+<section class="space-y-8" id="step-1">
+<header>
+<h2 class="font-headline-md text-primary mb-2">Select a Service</h2>
+<p class="font-body-md text-on-surface-variant">Choose the consultation type that best fits your project needs.</p>
+</header>
+<div class="grid gap-4">
+<!-- Service Card 1 -->
+<button class="group relative w-full text-left bg-surface-container-lowest p-6 rounded-lg border border-outline-variant hover:border-primary transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="architecture">architecture</span>
+<span class="font-label-caps text-secondary">KES 15,000</span>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Full Concept Design</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Complete interior design roadmap including spatial planning and 3D renders.</p>
+<div class="mt-4 flex items-center text-primary font-label-caps text-[10px] tracking-widest">
+                        60 MINUTES <span class="mx-2">•</span> ONSITE OR VIRTUAL
+                    </div>
+</button>
+<!-- Service Card 2 -->
+<button class="group relative w-full text-left bg-primary-container p-6 rounded-lg border border-primary transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-caps text-primary-fixed">KES 5,000</span>
+</div>
+<h3 class="font-headline-md text-xl text-white mb-1">Styling Consultation</h3>
+<p class="font-body-md text-sm text-primary-fixed-dim">Refresh your existing space with expert advice on furniture, art, and color.</p>
+<div class="mt-4 flex items-center text-primary-fixed-dim font-label-caps text-[10px] tracking-widest">
+                        45 MINUTES <span class="mx-2">•</span> VIRTUAL ONLY
+                    </div>
+<div class="absolute top-4 right-4">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- Service Card 3 -->
+<button class="group relative w-full text-left bg-surface-container-lowest p-6 rounded-lg border border-outline-variant hover:border-primary transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="lightbulb">lightbulb</span>
+<span class="font-label-caps text-secondary">FREE</span>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Discovery Call</h3>
+<p class="font-body-md text-sm text-on-surface-variant">A brief chat to discuss your vision and how Amani Interiors can help.</p>
+<div class="mt-4 flex items-center text-primary font-label-caps text-[10px] tracking-widest">
+                        15 MINUTES <span class="mx-2">•</span> PHONE CALL
+                    </div>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<div class="my-section-gap h-px"></div>
+<!-- What Happens Next Section -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<h4 class="font-headline-md text-lg">What happens next?</h4>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="event_available">event_available</span>
+<div>
+<p class="font-label-caps text-[11px] mb-1">CONFIRMATION</p>
+<p class="font-body-md text-sm text-on-surface-variant">You'll receive an instant email with your booking details and a calendar invite.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="description">description</span>
+<div>
+<p class="font-label-caps text-[11px] mb-1">PRE-WORK</p>
+<p class="font-body-md text-sm text-on-surface-variant">A questionnaire will be sent to help us understand your style before we meet.</p>
+</div>
+</li>
+</ul>
+</section>
+</main>
+<!-- Fixed Bottom Action Bar -->
+<nav class="fixed bottom-0 w-full bg-surface-container-lowest border-t border-outline-variant px-6 py-5 flex flex-col gap-4 z-50 shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-caps text-[10px] text-outline mb-1">SUMMARY</p>
+<p class="font-headline-md text-base">Styling Consultation</p>
+</div>
+<div class="text-right">
+<p class="font-headline-md text-lg text-primary">KES 5,000</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-5 rounded-lg font-label-caps text-sm tracking-[0.2em] hover:bg-primary active:scale-[0.98] transition-all">
+            CONTINUE TO DATE
+        </button>
+</nav>
+<!-- Footer (Minimal for Booking flow) -->
+<footer class="w-full pt-16 pb-32 bg-stone-100 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+<div class="flex flex-col items-center px-8 max-w-7xl mx-auto gap-4">
+<p class="font-serif italic text-stone-800 dark:text-stone-200">Amani Interiors</p>
+<p class="font-serif text-sm tracking-wide text-stone-600 dark:text-stone-400">© 2024 Amani Interiors. Crafted in Kenya.</p>
+<div class="flex gap-6 mt-2">
+<a class="text-stone-500 font-serif text-xs uppercase tracking-widest hover:text-emerald-900 transition-all" href="#">Privacy</a>
+<a class="text-stone-500 font-serif text-xs uppercase tracking-widest hover:text-emerald-900 transition-all" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Background Decorative Element (Subtle Warm Glow) -->
+<div class="fixed top-0 right-0 -z-10 w-full h-full opacity-30 pointer-events-none" style="background: radial-gradient(circle at 80% 20%, #e9c34922 0%, transparent 40%);"></div>
+</body></html>

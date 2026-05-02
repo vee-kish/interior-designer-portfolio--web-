@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#234f3b",
+                    "secondary-fixed-dim": "#e9c349",
+                    "tertiary-container": "#2a2c1c",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a2d1b7",
+                    "primary-container": "#013220",
+                    "outline": "#717973",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "secondary": "#735c00",
+                    "surface-container-highest": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "primary": "#001b0f",
+                    "inverse-surface": "#303030",
+                    "on-surface-variant": "#414943",
+                    "outline-variant": "#c1c8c2",
+                    "on-primary-container": "#6f9c84",
+                    "secondary-container": "#fed65b",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#745c00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#161709",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1b1b1b",
+                    "on-secondary-fixed": "#241a00",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1b1b1b",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed": "#002113",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#a2d1b7",
+                    "tertiary-fixed": "#e4e4cc",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-fixed": "#bdedd2",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-tertiary-container": "#92937e",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#3b6751"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Manrope"],
+                    "display-lg": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-underline:focus-within {
+            border-bottom-color: #735c00;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-12 py-6 max-w-full bg-stone-50/80 glass-nav border-b border-stone-200/50 shadow-sm shadow-emerald-900/5 font-serif tracking-tight">
+<div class="text-xl font-bold tracking-widest text-emerald-950">AMANI INTERIORS</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-stone-500 hover:text-emerald-800 transition-colors" href="#">Portfolio</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors" href="#">About</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors" href="#">Services</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors" href="#">Pricing</a>
+<a class="text-emerald-950 border-b-2 border-yellow-600 pb-1 font-semibold" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates"target="_blank">
+            Book Now </a>
+        </button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[409px] flex items-end px-12 pb-16 bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 opacity-10 mix-blend-multiply">
+<img class="w-full h-full object-cover" data-alt="Close-up of minimalist architectural textures and natural materials showing soft light on a cream-colored plastered wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwLHPpXh89N7-fAAv1iMLVGHKCqRXTKn5sDBVYQPWHpJx3wu4H9e2DUYV4nLKhD-LZJzmcMFjNymdK-6WIXDZx3f9ZYS56hl_bnAP-S8F0tEVJzOK-1heRvJ--H_mfoKrKbmygsk6jS-VyGZC0DzWorWDHicAOXLlcdoGR3b1CF7HtJA2DMf1VwFSyU0jxh3PCLbOx6eGVGiU3G5BPWyUO1k15Wli0WlJBM7snbmpmeGBs4AHMXvjiGr9xXoPBZ1LLtGd4QD9trUuT"/>
+</div>
+<div class="relative z-10 max-w-3xl">
+<p class="font-label-caps text-label-caps text-secondary mb-4 uppercase">Start a Conversation</p>
+<h1 class="font-display-lg text-display-lg text-primary">Let's create your sanctuary.</h1>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-12 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Details -->
+<div class="lg:col-span-4 space-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Our Studio</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Amani Interiors Design Hub<br/>
+                            9th Floor, Westlands Terrace<br/>
+                            Nairobi, Kenya
+                        </p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<a class="font-body-lg text-body-lg text-primary hover:text-secondary underline underline-offset-8 decoration-outline-variant transition-colors" href="mailto:hello@amaniinteriors.co.ke">hello@amaniinteriors.co.ke</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">call</span>
+<a class="font-body-lg text-body-lg text-primary hover:text-secondary underline underline-offset-8 decoration-outline-variant transition-colors" href="tel:+254700000000">+254 700 000 000</a>
+</div>
+</div>
+<div class="pt-8">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase">Follow Our Journey</p>
+<div class="flex gap-6">
+<a class="text-primary hover:text-secondary transition-colors font-body-md" href="#">Instagram</a>
+<a class="text-primary hover:text-secondary transition-colors font-body-md" href="#">Pinterest</a>
+<a class="text-primary hover:text-secondary transition-colors font-body-md" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-12 shadow-sm shadow-emerald-900/5">
+<form action="https://formspree.io/f/mlgzdznl" method="POST" class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative border-b border-outline-variant py-2 focus-within:border-secondary transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="name">Name</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-stone-300 font-body-lg" id="name" name="name" placeholder="How should we address you?" type="text"/>
+</div>
+<div class="relative border-b border-outline-variant py-2 focus-within:border-secondary transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="email">Email Address</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-stone-300 font-body-lg" id="email" name="email" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative border-b border-outline-variant py-2 focus-within:border-secondary transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="phone">Phone Number</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-stone-300 font-body-lg" id="phone" name="phone" placeholder="+254 --- --- ---" type="tel"/>
+</div>
+<div class="relative border-b border-outline-variant py-2 focus-within:border-secondary transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="subject">Service Interest</label>
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 text-primary font-body-lg appearance-none" id="subject" name="subject">
+<option>Residential Design</option>
+<option>Commercial Spaces</option>
+<option>Consultation Only</option>
+<option>Custom Furniture</option>
+</select>
+</div>
+</div>
+<div class="relative border-b border-outline-variant py-2 focus-within:border-secondary transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="message">Message</label>
+<textarea class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-stone-300 font-body-lg resize-none" id="message" name="message" placeholder="Tell us about your project aspirations..." rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto px-16 py-5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-all duration-300" type="submit">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="h-[500px] w-full bg-surface-container overflow-hidden">
+<div class="w-full h-full relative grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist architectural map view of a modern urban city with neutral tones and soft lighting" data-location="Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhDJigwVEkGKG1ul4o2aQs2g62aFlfMAUGMYdhuCbCc15ITaD93w5ZTo93o8irgWED_7vYBz_YMxuCeUgSVKqfZ8aOCM71XxCW1VdaeqcNyKbS__AIlmaNSXtUobb9_cmxcMElnVdfm-DsoI_ZBkioLBu_xyAVLrpoZ0qZJYkE-XqeMOdM5IrKba0mGO_M3J-iVO16TJXBsajt8MLzbWJZG4qqfXNuZoP4ZiJCcQFGrGWfArj857vdge5n1CWFUOyQ8tJWUDOLvmuF"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-on-secondary shadow-lg">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="mt-4 bg-surface-container-lowest px-4 py-2 shadow-xl border border-outline-variant">
+<p class="font-label-caps text-[10px] uppercase text-primary">Amani Studio</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-section-gap px-12 bg-surface-container-low border-t border-stone-200">
+<div class="max-w-3xl mx-auto text-center space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary">The Design Journal</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Sign up for monthly curated inspiration, interior trends, and exclusive project reveals from our Nairobi studio.</p>
+<form class="flex flex-col md:flex-row gap-4 mt-8">
+<input class="flex-1 bg-surface-container-lowest border border-outline-variant px-6 py-4 focus:ring-1 focus:ring-secondary focus:border-secondary outline-none font-body-md" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-primary-fixed-variant transition-all">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-12 right-12 z-50 group" href="#">
+<div class="flex items-center gap-4">
+<span class="bg-surface-container-lowest text-primary px-4 py-2 shadow-xl border border-outline-variant font-label-caps text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Chat Now</span>
+<div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+</div>
+</a>
+<!-- Footer -->
+<footer class="w-full py-20 px-12 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start gap-8 bg-stone-100 border-t border-stone-200 font-serif text-sm uppercase tracking-widest text-emerald-950">
+<div class="space-y-6">
+<div class="font-serif text-lg font-bold text-emerald-950">AMANI INTERIORS</div>
+<p class="max-w-xs normal-case font-body-md text-stone-600 tracking-normal">Creating bespoke living experiences that celebrate the spirit of Nairobi.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<a class="text-stone-600 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity" href="#">Instagram</a>
+<a class="text-stone-600 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity" href="#">Pinterest</a>
+<a class="text-stone-600 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity" href="#">LinkedIn</a>
+<a class="text-stone-600 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity" href="#">Privacy</a>
+<a class="text-stone-600 hover:text-emerald-700 underline-offset-4 hover:underline transition-opacity" href="#">Terms</a>
+</div>
+<div class="mt-8 lg:mt-0">
+<p class="text-stone-500 mb-2">Contact</p>
+<p class="text-stone-600 normal-case font-body-md tracking-normal">+254 700 000 000</p>
+</div>
+<div class="w-full lg:w-auto pt-12 lg:pt-0 border-t border-stone-200 lg:border-none">
+<p class="text-stone-400 text-[10px]">© 2024 AMANI INTERIORS. CRAFTING TIMELESS KENYAN SPACES.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | AMANI INTERIORS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#234f3b",
+                    "secondary-fixed-dim": "#e9c349",
+                    "tertiary-container": "#2a2c1c",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a2d1b7",
+                    "primary-container": "#013220",
+                    "outline": "#717973",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "secondary": "#735c00",
+                    "surface-container-highest": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "primary": "#001b0f",
+                    "inverse-surface": "#303030",
+                    "on-surface-variant": "#414943",
+                    "outline-variant": "#c1c8c2",
+                    "on-primary-container": "#6f9c84",
+                    "secondary-container": "#fed65b",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary-container": "#745c00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#161709",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1b1b1b",
+                    "on-secondary-fixed": "#241a00",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1b1b1b",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed": "#002113",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#a2d1b7",
+                    "tertiary-fixed": "#e4e4cc",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-fixed": "#bdedd2",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-tertiary-container": "#92937e",
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-tint": "#3b6751"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Manrope"],
+                    "display-lg": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-layer-shift {
+            background-color: rgba(249, 249, 249, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .ambient-lift:hover {
+            box-shadow: 0 20px 40px -10px rgba(1, 50, 32, 0.08);
+            transform: translateY(-4px);
+            transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Header / TopNavBar -->
+<nav class="sticky top-0 w-full z-50 flex justify-between items-center px-12 py-6 max-w-full bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm shadow-emerald-900/5">
+<div class="text-xl font-bold tracking-widest text-emerald-950 font-serif">AMANI INTERIORS</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 hover:text-emerald-800 transition-colors font-serif tracking-tight" href="#">Portfolio</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors font-serif tracking-tight" href="#">About</a>
+<a class="text-emerald-950 border-b-2 border-yellow-600 pb-1 font-semibold font-serif tracking-tight" href="#">Services</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors font-serif tracking-tight" href="#">Pricing</a>
+<a class="text-stone-500 hover:text-emerald-800 transition-colors font-serif tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates"target="_blank">
+            Book Now </a>
+        </button>
+</nav>
+<main class="max-w-[1280px] mx-auto px-12">
+<!-- Hero Section -->
+<section class="py-[120px] text-center max-w-3xl mx-auto">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">OUR EXPERTISE</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8">Design that speaks of heritage and modern elegance.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We offer a range of specialized interior design services tailored to the discerning Kenyan lifestyle, blending functional space planning with tactile luxury.</p>
+</section>
+<!-- Service Section: Residential -->
+<section class="mb-[120px] grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7">
+<div class="overflow-hidden bg-surface-container aspect-[4/3] relative">
+<img alt="Luxurious Kenyan residential living room" class="w-full h-full object-cover" data-alt="Modern high-end living room with floor-to-ceiling windows, earthy tones, Swahili-inspired textures, and warm sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWEGNNHMT7vONFgvWHngU2XRyjhemGBJCxZo9QsoWW84sC3mzN2SyzGfTvC-TqJxMH91mmJKTButp6BfcczPsEqS12nZz_TgEvBns9Bx8QWFfq19tTnPa3vq7AVU9aO9rT0oeB6y2wZg1k2NJQ0IFFymQQFN7ZTS15QlIoyK2-BiUe1Hu8oCwP6qDMNaa_KIQv-LpnQKZ5XByJ4VjUFD2ULiWw8GnX6u4t4UUp45B-innkG3XiYdFXRQDpkyiyieFfhqvTie2YdKax"/>
+</div>
+</div>
+<div class="lg:col-span-5 lg:pl-12">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">01 / PRIVATE SPACES</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Residential Interior Design</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">We craft homes that are sanctuaries. From soulful Swahili-modern coastal retreats to sophisticated Nairobi penthouses, our residential designs prioritize comfort, legacy, and light.</p>
+<div class="space-y-6">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-3">WHAT'S INCLUDED</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Full-home concept development</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Custom cabinetry &amp; millwork design</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Lighting &amp; electrical schematics</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Project procurement &amp; site management</li>
+</ul>
+</div>
+<div class="p-6 bg-surface-container-low border-l-4 border-secondary-fixed-dim">
+<h4 class="font-label-caps text-label-caps text-primary mb-1">IDEAL FOR</h4>
+<p class="text-sm italic text-on-surface-variant">Homeowners seeking a complete transformation that reflects personal heritage through a modern lens.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Section: Commercial (Reversed) -->
+<section class="mb-[120px] grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 order-2 lg:order-1 lg:pr-12">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">02 / PROFESSIONAL SPACES</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Commercial Interior Design</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">Elevating your brand through architectural discipline and sensory engagement. We design offices, boutiques, and hospitality venues that inspire productivity and patron loyalty.</p>
+<div class="space-y-6">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-3">WHAT'S INCLUDED</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Brand-aligned aesthetic strategy</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Ergonomic workspace optimization</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> High-traffic material specification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">check</span> Compliance &amp; accessibility planning</li>
+</ul>
+</div>
+<div class="p-6 bg-surface-container-low border-l-4 border-secondary-fixed-dim">
+<h4 class="font-label-caps text-label-caps text-primary mb-1">IDEAL FOR</h4>
+<p class="text-sm italic text-on-surface-variant">Corporate offices, boutique hotels, and retail brands looking to manifest their values in a physical environment.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="overflow-hidden bg-surface-container aspect-[4/3] relative">
+<img alt="Sophisticated commercial lobby design" class="w-full h-full object-cover" data-alt="Minimalist high-end office lobby with dark wood paneling, brass accents, and large architectural planters with lush green foliage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhNXNZ9qkBAKDkkASrieduuNZH_71HJWVERP_V1xvrXyiGVORAKMXvYvncuAx_M3oCHHKrFzwRXNb1uL2qwYBIEtVDNxYGutnfrXkvJbdPJFRE0QW5qUpGN_IwrH4onfcriSoF9VR9hbN6sQMkAu8HSHMKk4ChKHXKB1EnGc-VcV6zSlGJx9ZShLLptURBn39HwPCl5FlXX5or_bKmjIUZRfHLYwGGJBk8CzKeEMeRtemvwoJEDc86KCDh3JAUR7fD_XT76aHM55hL"/>
+</div>
+</div>
+</section>
+<!-- Service Section: Space Planning (Cards Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-[120px]">
+<!-- Card 03 -->
+<div class="group bg-surface-container-lowest p-8 border border-outline-variant/30 ambient-lift">
+<div class="mb-12 aspect-video overflow-hidden">
+<img alt="Architectural floor plan view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Overhead architectural drafting of a luxury apartment with elegant linework and minimalist furniture symbols on beige paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnfn2UrswLgF78aI-NT1UJ7j5eUc7jlat6sV8wUsWRaG7JIVkaWHUzREBwoGhDvAPdTgGA9OZfRS2QP-CLaEwDb_UB0E10CPul6eimrf7a_L1Ae4BLVUOsDZ2YbsRENJX8sBqtNZ75jkeQLdwjjHUbuStKQeEIGxTECDa_eJLW2s-1zA_IyEuDSFgxNLa_eAJbs-x5MXKodMtrdi0hMO1xZsBqFEtZXpW1hQvDMdYPlgoMMckWUXiyM0w9SsbzXXLW5_UvIpjP66WZ"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">03 / ARCHITECTURAL FLOW</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Space Planning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Before aesthetics comes intelligence. We analyze your movement and habits to create layouts that maximize light, ventilation, and functional flow.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="text-on-surface-variant text-sm">
+<h5 class="font-bold text-primary mb-2">INCLUDES</h5>
+<ul class="space-y-1">
+<li>• 2D Layouts</li>
+<li>• 3D Massing</li>
+<li>• Zoning Plans</li>
+</ul>
+</div>
+<div class="text-on-surface-variant text-sm">
+<h5 class="font-bold text-primary mb-2">IDEAL FOR</h5>
+<p class="italic">New builds or major renovations in the early stages.</p>
+</div>
+</div>
+</div>
+<!-- Card 04 -->
+<div class="group bg-surface-container-lowest p-8 border border-outline-variant/30 ambient-lift">
+<div class="mb-12 aspect-video overflow-hidden">
+<img alt="Curated furniture and textiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Curated selection of velvet textiles, hand-carved wooden stools, and artisanal ceramic vases in a soft daylight setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7pu9WhqzKZBpr8PZmtVE_MmCSEryjqYghMBnxOnzhtgNzxQz5dem7zNBCswPIKLlT2XQMP0WcqWXz4MwnZka-hC-JxP2TFVFKL1U0QGc_QAKDcwM0L8vjE38CdKH7eGs_GG0yJPGjleyWfzphePd81l8RGy3snHvvdH42sUjM9Dx3I035o5O5fFWr6CeywA_I8Htv08sryKLFs_jCJdzcZ4NXGl4W4bHCYtQ-gbaIY7XIosRmXLj1eeKGySpUgJskKdbgHlyEP9I"/>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">04 / THE FINAL TOUCH</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Furniture Selection &amp; Styling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">The soul of a room is in the tactile. We source bespoke Kenyan furniture and international pieces to curate a layer of warmth and texture.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="text-on-surface-variant text-sm">
+<h5 class="font-bold text-primary mb-2">INCLUDES</h5>
+<ul class="space-y-1">
+<li>• Curated Sourcing</li>
+<li>• Art Curation</li>
+<li>• Textiles &amp; Decor</li>
+</ul>
+</div>
+<div class="text-on-surface-variant text-sm">
+<h5 class="font-bold text-primary mb-2">IDEAL FOR</h5>
+<p class="italic">Refreshing existing spaces without structural changes.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact CTA Section -->
+<section class="mb-[120px] bg-primary-container text-on-primary py-24 px-12 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-on-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg text-headline-xl mb-8">Ready to define your space?</h2>
+<p class="text-on-primary-container font-body-lg mb-10">Schedule a complimentary consultation to discuss your vision and how our Kenyan-rooted modernism can bring it to life.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 font-serif font-bold uppercase tracking-widest hover:bg-secondary-fixed-dim transition-all">
+                        Inquire Now
+                    </button>
+<button class="border border-on-primary/30 text-on-primary px-10 py-4 font-serif font-bold uppercase tracking-widest hover:bg-on-primary/10 transition-all">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-12 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start gap-8 bg-stone-100 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+<div class="max-w-xs">
+<div class="font-serif text-lg font-bold text-emerald-950 dark:text-stone-50 mb-4">AMANI INTERIORS</div>
+<p class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 mb-8 leading-loose">
+                © 2024 AMANI INTERIORS. CRAFTING TIMELESS KENYAN SPACES.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-primary mb-2">CONNECT</h4>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-yellow-500 underline-offset-4 hover:underline" href="#">Instagram</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-yellow-500 underline-offset-4 hover:underline" href="#">Pinterest</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-yellow-500 underline-offset-4 hover:underline" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-primary mb-2">LEGAL</h4>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-yellow-500 underline-offset-4 hover:underline" href="#">Privacy</a>
+<a class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-yellow-500 underline-offset-4 hover:underline" href="#">Terms</a>
+</div>
+<div class="max-w-xs">
+<h4 class="font-label-caps text-label-caps text-primary mb-2">STUDIO</h4>
+<p class="font-serif text-sm uppercase tracking-widest text-stone-600 dark:text-stone-400 leading-loose">
+                Riverside Drive, Westlands<br/>
+                Nairobi, Kenya
+            </p>
+</div>
+</footer>
+</body></html>

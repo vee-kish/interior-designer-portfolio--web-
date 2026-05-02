@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#241a00",
+                        "inverse-surface": "#303030",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "on-surface-variant": "#414943",
+                        "secondary": "#735c00",
+                        "inverse-primary": "#a2d1b7",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container": "#eeeeee",
+                        "on-background": "#1b1b1b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e4e4cc",
+                        "on-secondary-container": "#745c00",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#2a2c1c",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#92937e",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-primary-container": "#6f9c84",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed": "#bdedd2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "primary-fixed-dim": "#a2d1b7",
+                        "on-primary-fixed": "#002113",
+                        "primary": "#001b0f",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#013220",
+                        "outline-variant": "#c1c8c2",
+                        "outline": "#717973",
+                        "tertiary": "#161709",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#1b1b1b",
+                        "surface-tint": "#3b6751",
+                        "on-primary-fixed-variant": "#234f3b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .ambient-glow { box-shadow: 0 10px 30px -5px rgba(1, 50, 32, 0.08); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200 shadow-sm flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span id="menu-btn" class="material-symbols-outlined text-emerald-900" style="cursor:pointer;">
+    menu
+</span>
+
+<nav id="menu" class="hidden">
+    <ul>
+        <li><a href="Homepagemob.html">Home</a></li>
+        <li><a href="Aboutdesignermob.html">About</a></li>
+        <li><a href="Contactmob.html">Contact</a></li>
+        <li><a href="Portfoliomob.html">Portfolio</a></li>
+        <li><a href="Servicemob.html">Service</a></li>
+    </ul>
+</nav>
+
+<style>
+    #menu {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        /* Added this to make sure it stays on top of other content */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    #menu {
+  /* This makes it semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); 
+  
+  /* This creates the "frosting" blur effect on the background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  
+  /* A thin white border makes the glass edge pop */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  color: #111; /* Dark text usually looks better on glass */
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+/* Let's make the links look better on the glass background */
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #064e3b; /* Matches your emerald-900 icon color */
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+/* Add this to your #menu */
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+/* Adjust your .hidden class slightly */
+.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+</style>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+        // Use 'sideMenu' here because that's what you named the variable above
+        sideMenu.classList.toggle('hidden');
+    });
+</script>
+<span class="text-lg font-serif font-bold tracking-widest text-emerald-950 uppercase">AMANI INTERIORS</span>
+</div>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates"target="_blank">
+            Book Now </a>
+        </button>
+</header>
+<main class="pt-24 pb-12">
+<!-- Hero Title Section -->
+<section class="px-6 mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">Portfolio</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                A curated selection of our most meaningful transformations across Kenya. Modern African minimalism at its finest.
+            </p>
+</section>
+<!-- Horizontal Filter Chips -->
+<nav class="sticky top-16 z-40 bg-surface/95 backdrop-blur-sm pt-2 pb-6 px-6 overflow-x-auto no-scrollbar flex gap-3 items-center">
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps transition-all shadow-sm">
+                All Projects
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:bg-stone-200 transition-colors">
+                Living Rooms
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:bg-stone-200 transition-colors">
+                Bedrooms
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:bg-stone-200 transition-colors">
+                Offices
+            </button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps hover:bg-stone-200 transition-colors">
+                Commercial
+            </button>
+</nav>
+<!-- Portfolio Grid (Single Column for Mobile Emphasis) -->
+<section class="px-6 flex flex-col gap-12">
+<!-- Item 1: Large Featured -->
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden rounded-lg ambient-glow mb-4">
+<img alt="Elegant modern living room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern minimalist living room in Nairobi with large windows, earthy neutral tones, warm wood accents, and a sculptural clay vase on a marble table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtGWOWK1OHGbCkh0vD2OK8s9GWFGEFL4vr__cp40zL9azmKTcahkBPEFR32d75tZnf69aw6Y5h9n_nGKvlegC2_u9BUHqM0VpsGWTSGnopudMsmWxvm7RY3DJp8BInnvbfnirYkLSUeRifAoY_Wqo3qgJ9NIKU2IqaHQdcE6PTS8QEioAVJjnfWNuld4kU43oKPUw7pkd3a-AVq_BYeDC0hN15tA6yI9mfksPibsD55T_ZfhES9l2WPEWe91jt9uhp9szDwAaAIoPb"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Nairobi, KE</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Serene Sanctuary</h3>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden rounded-lg ambient-glow mb-4">
+<img alt="Sleek office space" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-end boutique office interior with deep green walls, minimalist oak desk, brass light fixtures, and African artisanal textiles as wall art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7YaAd7fQBorzrHd9Peg_fCrSfEk_5AGUNlwJ_aK-JKBDSUzjAHlzV6TUG3DMFV43WUnOVjWHHvxT012fM4ltifnV07yRA4pLSAJdf_AzXO8ufqwfyIGuJvbeYqjlPZ-QJpmfDrSl5KwqBsmJzaX_Va4hSBCcfYU1SYFxDeYUK_Q9XWYklx0UUUbhu8z08q6Nlm_rtXoaYj3xGFA9kow_Pr-WNPXFJALgHiBlCMhjssrsLSEMVh6GKYPmpgAqhIn1bM0pwI4jnNi7C"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Mombasa, KE</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">The Coastal Study</h3>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<!-- Item 3: Landscape break -->
+<div class="group">
+<div class="aspect-video overflow-hidden rounded-lg ambient-glow mb-4">
+<img alt="Swahili modern bedroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury Swahili modern bedroom with high ceilings, white plaster walls, a carved wooden bed frame, and soft morning sunlight filtering through linen curtains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhGMKWgzz50BnHzM3NuOlrNc4teEaUDLRTdh72M9tskwLOrXmFKMmiZbmNmKLFy5I1HQx_th5zqtMapFRRu6R75a5nA4hBnSW3hUAH_8BDJkFLITmJnkSs5MgNmgSo1DTL86eeLjZ2gqZXbsjM4DUkMR-mOhwtlfYx0wTWmKvY_Y6KzFoMdzbuxLnGB-GqJYrJ51Pr9MFoM_d_aaTDPPY0aqQPr0TfWC_pDsmKmtjuq8IQLqiLalic55D7QZx7bS_0Xm1kaZaUhc07"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Lamu, KE</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Sultana Suite</h3>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden rounded-lg ambient-glow mb-4">
+<img alt="Commercial lounge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Upscale commercial lounge with curved velvet furniture in deep forest green, terracotta tiled floors, and abundant indoor tropical plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs9mfgnGiVYnr_ERRNjNxnTNjzAk11EpOmbdmBidXS3Jk9s8Af9twos1rFBrbfAWvKbnXcvHiOFlHB7IKtSNchzrm4nZFklEXv1y_XyQ6_vPUunt0zaUVRTJW_evO5nyKT7wikwSw-fY1LmaBpnzhMInpRMyjKjVCAEcNeZWL7IqWMNlZpiqH3sc1nJSlZKdOQ9j4N7SF2kKUlVkwiZ-sl1MwEDRqWAoFx4rsRj_mw0FMZSZHytBze-Ol6h0n-VsyZl_Kp-1S3o6sQ"/>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Nairobi, KE</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">The Zenith Lounge</h3>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-gap px-6 py-20 bg-stone-100 text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Ready to transform your space?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 px-4">
+                Join our list of exclusive clients and bring timeless elegance to your home or office.
+            </p>
+<button class="bg-primary-container text-on-primary px-10 py-5 rounded-lg font-label-caps text-sm w-full max-w-xs transition-transform active:scale-95 shadow-md">
+                Start a Conversation
+            </button>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-stone-100 border-t border-stone-200 w-full pt-16 pb-24">
+<div class="flex flex-col items-center px-8 max-w-7xl mx-auto gap-8 text-center">
+<span class="font-serif italic text-2xl text-stone-800">Amani</span>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 transition-all underline decoration-amber-600/30" href="#">Instagram</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 transition-all underline decoration-amber-600/30" href="#">LinkedIn</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 transition-all underline decoration-amber-600/30" href="#">Privacy</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 transition-all underline decoration-amber-600/30" href="#">Terms</a>
+</div>
+<p class="font-serif text-sm tracking-wide text-stone-500">© 2026 Amani Interiors. Crafted in Kenya.</p>
+</div>
+</footer>
+<!-- FAB for Quick Access (Contextually appropriate for Portfolio Browsing) -->
+<div class="fixed bottom-8 right-6 z-50">
+<button class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center shadow-xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+</body></html>

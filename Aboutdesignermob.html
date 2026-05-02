@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#241a00",
+                    "inverse-surface": "#303030",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "on-surface-variant": "#414943",
+                    "secondary": "#735c00",
+                    "inverse-primary": "#a2d1b7",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-background": "#1b1b1b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e4cc",
+                    "on-secondary-container": "#745c00",
+                    "background": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#2a2c1c",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-container": "#92937e",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-primary-container": "#6f9c84",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#bdedd2",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "primary-fixed-dim": "#a2d1b7",
+                    "on-primary-fixed": "#002113",
+                    "primary": "#001b0f",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#013220",
+                    "outline-variant": "#c1c8c2",
+                    "outline": "#717973",
+                    "tertiary": "#161709",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface": "#1b1b1b",
+                    "surface-tint": "#3b6751",
+                    "on-primary-fixed-variant": "#234f3b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Noto Serif"],
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "display-lg": ["Noto Serif"],
+                    "body-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-glow {
+            box-shadow: 0 10px 40px -10px rgba(1, 50, 32, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200 shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="text-emerald-900 active:scale-95 transition-transform">
+<span id="menu-btn" class="material-symbols-outlined text-emerald-900" style="cursor:pointer;">
+    menu
+</span>
+
+<nav id="menu" class="hidden">
+    <ul>
+        <li><a href="Homepagemob.html">Home</a></li>
+        <li><a href="Aboutdesignermob.html">About</a></li>
+        <li><a href="Contactmob.html">Contact</a></li>
+        <li><a href="Portfoliomob.html">Portfolio</a></li>
+        <li><a href="Servicemob.html">Service</a></li>
+    </ul>
+</nav>
+
+<style>
+    #menu {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        border-radius: 8px;
+        z-index: 100;
+        /* Added this to make sure it stays on top of other content */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    #menu {
+  /* This makes it semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); 
+  
+  /* This creates the "frosting" blur effect on the background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  
+  /* A thin white border makes the glass edge pop */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  color: #111; /* Dark text usually looks better on glass */
+  padding: 20px;
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  border-radius: 12px;
+  z-index: 100;
+}
+
+/* Let's make the links look better on the glass background */
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #064e3b; /* Matches your emerald-900 icon color */
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+/* Add this to your #menu */
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+/* Adjust your .hidden class slightly */
+.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+</style>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('menu');
+    
+    menuBtn.addEventListener('click', () => {
+        // Use 'sideMenu' here because that's what you named the variable above
+        sideMenu.classList.toggle('hidden');
+    });
+</script>
+</button>
+<span class="text-lg font-serif font-bold tracking-widest text-emerald-950">AMANI INTERIORS</span>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg font-label-caps text-xs active:scale-95 transition-transform"><a href="https://calendly.com/vanessaaffiliates"target="_blank">
+            Book Now </a>
+        </button>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-6 mb-16">
+<div class="relative w-full aspect-[3/4] mb-8 overflow-hidden rounded-sm ambient-glow">
+<img alt="Principal Designer" class="w-full h-full object-cover" data-alt="Sophisticated female interior designer with elegant attire standing in a sunlit, high-end minimalist studio with earthy textures and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcn0xSlb5dUPKugY0S98SGCZ3OLDm8lODlmLG-0YLDVAUpEqaQpQf-7af1Wg8IBxz6FPNb5PEzYxnNBbGk4Rnbk0JeAx4bQmI9NeQysavZ3st8k6zOK--X343Wqi7jsoHIehPPlSAtZoLQj5v81HQrXMeD2TRFeg3l3TQgH4LdHgcsZ1v_9bqq3Rfrk679akGlRyXS879u7vcQNmo9HLSyTqaJX79vfOxFtLWSWrtZKRX3kKU5xVWqHO8Qu7tPgD_ynGOMmoeuOmmp"/>
+</div>
+<div class="space-y-4">
+<span class="font-label-caps text-on-primary-container tracking-[0.2em]">PRINCIPAL DESIGNER</span>
+<h1 class="font-headline-xl text-primary">The Visionary</h1>
+<p class="font-body-lg text-on-surface-variant italic">"Design is not just about filling a space; it is about honoring the story that lives within its walls."</p>
+</div>
+</section>
+<!-- Designer's Story -->
+<section class="px-6 py-12 bg-surface-container-lowest">
+<div class="max-w-md mx-auto">
+<h2 class="font-headline-md text-primary mb-6">A Journey of Heritage</h2>
+<div class="space-y-6 text-on-surface-variant font-body-md leading-relaxed">
+<p>With over a decade of experience in high-end residential design across East Africa, our lead designer has pioneered a unique aesthetic that bridges the gap between traditional craft and contemporary luxury.</p>
+<p>Founded on the belief that Kenyan interiors should reflect both local warmth and global sophistication, Amani Interiors was born as a sanctuary for those who seek intentional, curated living.</p>
+</div>
+</div>
+</section>
+<!-- Design Philosophy Bento -->
+<section class="px-6 py-12">
+<h2 class="font-label-caps text-center text-primary-container mb-10 tracking-[0.3em]">OUR PHILOSOPHY</h2>
+<div class="grid grid-cols-1 gap-6">
+<!-- Philosophy Card 1 -->
+<div class="p-8 border border-outline-variant bg-white ambient-glow rounded-sm">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-md text-primary mb-3">Intentional Minimalism</h3>
+<p class="font-body-md text-on-surface-variant">Prioritizing quality over quantity. Every piece selected serves a purpose, creating a home that feels spacious yet deeply personal.</p>
+</div>
+<!-- Philosophy Card 2 -->
+<div class="p-8 bg-primary-container text-white rounded-sm">
+<span class="material-symbols-outlined text-secondary-container mb-4" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md mb-3">Tactile Heritage</h3>
+<p class="font-body-md opacity-90">Incorporating raw textures—hand-woven textiles, reclaimed timber, and artisanal ceramics—that ground a modern space in centuries of craftsmanship.</p>
+</div>
+<!-- Philosophy Card 3 -->
+<div class="p-8 border border-outline-variant bg-white ambient-glow rounded-sm">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="disciplined_craft">settings_accessibility</span>
+<h3 class="font-headline-md text-primary mb-3">Disciplined Craft</h3>
+<p class="font-body-md text-on-surface-variant">A commitment to precision. From the initial sketch to the final placement, we ensure every detail meets our rigorous standards of excellence.</p>
+</div>
+</div>
+</section>
+<!-- Legacy of Excellence -->
+<section class="px-6 py-16 bg-surface-container">
+<div class="text-center mb-10">
+<h2 class="font-headline-md text-primary">Legacy of Excellence</h2>
+<div class="w-12 h-[1px] bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="space-y-8 max-w-sm mx-auto">
+<div class="flex items-start gap-4">
+<span class="font-headline-md text-secondary-container bg-primary-container w-12 h-12 flex items-center justify-center shrink-0 rounded-full">12</span>
+<div>
+<h4 class="font-label-caps text-primary">YEARS IN DESIGN</h4>
+<p class="font-body-md text-on-surface-variant">Defining high-end luxury interiors across Nairobi and beyond.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-headline-md text-secondary-container bg-primary-container w-12 h-12 flex items-center justify-center shrink-0 rounded-full">85</span>
+<div>
+<h4 class="font-label-caps text-primary">CURATED PROJECTS</h4>
+<p class="font-body-md text-on-surface-variant">From boutique hotels to private coastal estates.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-headline-md text-secondary-container bg-primary-container w-12 h-12 flex items-center justify-center shrink-0 rounded-full">04</span>
+<div>
+<h4 class="font-label-caps text-primary">AWARDS</h4>
+<p class="font-body-md text-on-surface-variant">Recognized for excellence in sustainable luxury and regional innovation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 py-20 text-center">
+<h2 class="font-headline-md text-primary mb-6">Let's craft your story together.</h2>
+<button class="w-full py-4 bg-primary text-on-primary font-label-caps tracking-widest hover:bg-primary-container transition-colors">
+    <link href="Contactmob.html">
+          START A CONVERSATION
+            </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-24 bg-stone-100 border-t border-stone-200">
+<div class="flex flex-col items-center px-8 max-w-7xl mx-auto gap-8 text-center">
+<span class="font-serif italic text-2xl text-stone-800">Amani Interiors</span>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 underline decoration-amber-600/50" href="#">Instagram</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 underline decoration-amber-600/50" href="#">LinkedIn</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 underline decoration-amber-600/50" href="#">Privacy</a>
+<a class="font-serif text-sm tracking-wide text-stone-600 hover:text-emerald-900 underline decoration-amber-600/50" href="#">Terms</a>
+</div>
+<p class="font-serif text-xs tracking-wide text-stone-500">
+                © 2026 Amani Interiors. Crafted in Kenya.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only Active State for "The Studio") -->
+<nav class="fixed bottom-0 w-full z-50 bg-stone-50/90 backdrop-blur-md border-t border-stone-200 md:hidden h-16 flex items-center justify-around px-4">
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[10px] font-label-caps">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span class="text-[10px] font-label-caps">Services</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-emerald-900 font-bold">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[10px] font-label-caps">The Studio</span>
+<div class="w-1 h-1 bg-amber-600 rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px] font-label-caps">Journal</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-stone-600">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-[10px] font-label-caps">Contact</span>
+</div>
+</nav>
+</body></html>
