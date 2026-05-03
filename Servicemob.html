@@ -161,6 +161,7 @@
 <header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 shadow-sm">
 <div class="flex justify-between items-center px-6 py-4 w-full">
 <div class="flex items-center">
+      <body class ="pt-20">
 <span id="menu-btn" class="material-symbols-outlined text-emerald-900" style="cursor:pointer;">
     menu
 </span>
@@ -259,18 +260,18 @@ transition: transform 0.3s ease, opacity 0.3s ease;
         </button>
 </div>
 </header>
-<main class="pt-24 pb-section-gap px-margin-mobile max-w-lg mx-auto">
-<!-- Hero Section -->
+<main class="pt-24 pb-section-gap px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <!-- Hero Section -->
 <section class="mb-12">
 <p class="font-label-caps text-secondary mb-4">OUR SERVICES</p>
 <h1 class="font-headline-xl text-primary mb-6">Tailored Kenyan Elegance</h1>
 <p class="text-on-surface-variant font-body-lg">We create spaces that harmonize contemporary functionality with the soulful textures of Kenyan craftsmanship.</p>
 </section>
 <!-- Services Stack -->
-<div class="space-y-8">
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 <!-- Service Card: Residential -->
 <article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/30">
-<div class="h-56 w-full relative">
+<div class="w-full aspect-[4/3] relative">
 <img class="w-full h-full object-cover" data-alt="Luxurious modern living room in Nairobi with high ceilings, large windows, Swahili-inspired textures, and warm afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDCiLAbmLu8TSvXNSlOiC33hH2jU_k8M-q4S3f4auwUR6u2texxJrSZ-icypvff0YC3DlsxIoiTVMbbhEozGooXB3tWsHeicNubJBbjc1XdSSKVioXg5BkziLCFi4I4xnWfRlp5ircnmfDM-jL0MS8nZEjqE9hpSHePJmxmYl5fvROH6xMRglnM82vZZb9wRlYRffBxJGu1rzvwq9YcSTcMCK1Bh39gHDuggsuYVbQqPBBGOYq7i4m-Ct0u56H4tDcfmAL3gV5yWw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
 </div>
@@ -384,6 +385,15 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 <button class="w-full py-4 border border-primary text-primary font-label-caps tracking-widest hover:bg-primary hover:text-white transition-colors duration-300">ENQUIRE</button>
 </div>
 </article>
+      <script>
+document.querySelectorAll("button").forEach(btn => {
+  if (btn.textContent.includes("ENQUIRE")) {
+    btn.addEventListener("click", () => {
+      window.location.href = "https://calendly.com/vanessaaffiliates";
+    });
+  }
+});
+</script>
 </div>
 <!-- Consultation Banner -->
 <section class="mt-section-gap bg-primary-container p-8 rounded-xl text-center">
@@ -431,4 +441,12 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 <span class="font-label-caps text-[9px] mt-1">Contact</span>
 </div>
 </nav>
-</body></html>
+      <script>
+const menuBtn = document.querySelector('[data-icon="menu"]');
+
+menuBtn.addEventListener('click', () => {
+  alert("Menu coming soon"); // replace with real menu later
+});
+</script>
+</body>
+</html>
