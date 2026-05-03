@@ -108,6 +108,52 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <style>
+
+    /* --- Your existing CSS --- */
+    body {
+      margin: 0;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    /* (a lot of your styles here...) */
+
+
+    /* ✅ ADD THIS AT THE END */
+
+    /* Tablet */
+    @media (min-width: 768px) {
+
+      .container {
+        padding: 40px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+    }
+
+  </style>
   </head>
 <body class="font-body-md text-on-surface selection:bg-secondary-container">
 <!-- TopAppBar -->
