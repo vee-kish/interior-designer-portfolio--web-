@@ -385,15 +385,6 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 <button class="w-full py-4 border border-primary text-primary font-label-caps tracking-widest hover:bg-primary hover:text-white transition-colors duration-300">ENQUIRE</button>
 </div>
 </article>
-      <script>
-document.querySelectorAll("button").forEach(btn => {
-  if (btn.textContent.includes("ENQUIRE")) {
-    btn.addEventListener("click", () => {
-      window.location.href = "https://calendly.com/vanessaaffiliates";
-    });
-  }
-});
-</script>
 </div>
 <!-- Consultation Banner -->
 <section class="mt-section-gap bg-primary-container p-8 rounded-xl text-center">
@@ -446,6 +437,24 @@ const menuBtn = document.querySelector('[data-icon="menu"]');
 
 menuBtn.addEventListener('click', () => {
   alert("Menu coming soon"); // replace with real menu later
+});
+</script>
+      <script>
+document.querySelectorAll("button").forEach(btn => {
+  if (btn.textContent.includes("ENQUIRE")) {
+    btn.addEventListener("click", () => {
+      window.location.href = "https://calendly.com/YOUR-LINK";
+    });
+  }
+});
+</script>
+      <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
 </script>
 </body>
