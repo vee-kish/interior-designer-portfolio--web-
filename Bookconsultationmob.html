@@ -290,7 +290,7 @@ document.getElementById("go-calendly").addEventListener("click", async () => {
   }
 
   // ✅ SEND TO GOOGLE SHEETS
-  await fetch("https://YOUR-WEBHOOK-URL", {
+  await fetch("https://docs.google.com/spreadsheets/d/1__frtLdJ8p1nA7_rhatIUWzNKeLp4e5NTZ8FhqRWnwQ/edit?usp=sharing", {
     method: "POST",
     body: JSON.stringify({
       name,
@@ -336,6 +336,7 @@ menuBtn.addEventListener("click", () => {
 
   return ContentService.createTextOutput("Success");
 }
+    
   </script>
 
 </body>
