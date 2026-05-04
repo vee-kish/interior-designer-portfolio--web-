@@ -120,79 +120,69 @@ Continue
 
 </div>
 
-<!-- JS -->
+<!-- JS --!>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
 const cards = document.querySelectorAll(".service-card");
-const serviceName = document.getElementById("service-name");
-const servicePrice = document.getElementById("service-price");
+const continueBtn = document.getElementById("continue");
+const payBtn = document.getElementById("pay-btn");
 
 const step1 = document.getElementById("step-1");
 const step2 = document.getElementById("step-2");
 const step3 = document.getElementById("step-3");
 
-const continueBtn = document.getElementById("continue");
-const payBtn = document.getElementById("pay-btn");
 const calendly = document.getElementById("calendly");
-
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
 
 let selectedLink = "";
 let selectedPrice = 0;
 
-// MENU
-menuBtn.onclick = () => menu.classList.toggle("hidden");
-
 // SELECT SERVICE
 cards.forEach(card => {
-  card.onclick = () => {
+  card.addEventListener("click", () => {
 
-    cards.forEach(c => {
-      c.classList.remove("bg-green-900","text-white");
-      const tick = c.querySelector(".tick");
-      if (tick) tick.remove();
-    });
-
+    cards.forEach(c => c.classList.remove("bg-green-900","text-white"));
     card.classList.add("bg-green-900","text-white");
-
-    const tick = document.createElement("span");
-    tick.innerHTML = "✔";
-    tick.className = "tick absolute right-3 top-3 text-white";
-    card.style.position = "relative";
-    card.appendChild(tick);
 
     selectedLink = card.dataset.link;
     selectedPrice = Number(card.dataset.price);
 
-    serviceName.textContent = card.dataset.name;
-    servicePrice.textContent = "KES " + selectedPrice;
-
-    // 🔥 Change button text dynamically
-    payBtn.textContent = selectedPrice === 0
-      ? "Continue to Booking"
-      : "Pay & Continue";
-
-  };
+    console.log("Selected:", selectedPrice); // DEBUG
+  });
 });
 
 // STEP 1 → STEP 2
-continueBtn.onclick = () => {
-  if (!selectedLink) return alert("Select a service first");
+continueBtn.addEventListener("click", () => {
+
+  if (!selectedLink) {
+    alert("Select a service first");
+    return;
+  }
+
   step1.classList.add("hidden");
   step2.classList.remove("hidden");
-};
+});
 
-// PAYMENT / CONTINUE
-payBtn.onclick = () => {
+// PAYMENT
+payBtn.addEventListener("click", () => {
 
   const email = document.getElementById("email").value;
-  if (!email) return alert("Enter your email");
 
-  // FREE SERVICE → SKIP PAYMENT
+  if (!email) {
+    alert("Enter your email");
+    return;
+  }
+
+  console.log("Pay clicked", selectedPrice); // DEBUG
+
+  // FREE → skip payment
   if (selectedPrice === 0) {
     loadCalendly(email);
+    return;
+  }
+
+  if (typeof PaystackPop === "undefined") {
+    alert("Payment system not loaded. Check internet or script.");
     return;
   }
 
@@ -203,21 +193,25 @@ payBtn.onclick = () => {
     currency: "KES",
     ref: "AMANI_" + Date.now(),
 
-    callback: function() {
+    callback: function(response) {
+      alert("Payment success!");
       loadCalendly(email);
+    },
+
+    onClose: function() {
+      alert("Payment cancelled");
     }
   });
 
   handler.openIframe();
-};
+});
 
 // LOAD CALENDLY
 function loadCalendly(email) {
   step2.classList.add("hidden");
   step3.classList.remove("hidden");
 
-  calendly.src =
-    selectedLink + "?email=" + encodeURIComponent(email);
+  calendly.src = selectedLink + "?email=" + encodeURIComponent(email);
 }
 
 });
