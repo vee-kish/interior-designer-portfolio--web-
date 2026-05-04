@@ -322,6 +322,21 @@ menuBtn.addEventListener("click", () => {
 
 });
 </script>
+  <script>
+    function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    data.name,
+    data.email,
+    data.service,
+    new Date()
+  ]);
+
+  return ContentService.createTextOutput("Success");
+}
+  </script>
 
 </body>
 </html>
