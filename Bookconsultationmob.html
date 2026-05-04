@@ -219,6 +219,109 @@ document.getElementById("go-calendly").onclick = () => {
 };
 
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const cards = document.querySelectorAll(".service-card");
+const serviceName = document.getElementById("service-name");
+const servicePrice = document.getElementById("service-price");
+
+const step1 = document.getElementById("step-1");
+const step2 = document.getElementById("step-2");
+const step3 = document.getElementById("step-3");
+
+const continueBtn = document.getElementById("continue");
+const calendly = document.getElementById("calendly");
+
+let selectedLink = "";
+let selectedService = "";
+
+// 🔥 SELECT SERVICE
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    cards.forEach(c => {
+      c.classList.remove("bg-green-900","text-white");
+      const tick = c.querySelector(".tick");
+      if (tick) tick.remove();
+    });
+
+    card.classList.add("bg-green-900","text-white");
+
+    // ✅ ADD TICK
+    const tick = document.createElement("span");
+    tick.innerHTML = "✔";
+    tick.className = "tick absolute top-3 right-3 text-white text-lg";
+    card.style.position = "relative";
+    card.appendChild(tick);
+
+    selectedService = card.dataset.name;
+    selectedLink = card.dataset.link;
+
+    serviceName.textContent = selectedService;
+    servicePrice.textContent = card.dataset.price;
+
+  });
+});
+
+// 🔥 STEP 1 → STEP 2
+continueBtn.addEventListener("click", () => {
+
+  if (!selectedLink) {
+    alert("Please select a service first");
+    return;
+  }
+
+  step1.classList.add("hidden");
+  step2.classList.remove("hidden");
+
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+
+// 🔥 STEP 2 → STEP 3
+document.getElementById("go-calendly").addEventListener("click", async () => {
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+
+  if (!name || !email) {
+    alert("Fill in your details");
+    return;
+  }
+
+  // ✅ SEND TO GOOGLE SHEETS
+  await fetch("https://YOUR-WEBHOOK-URL", {
+    method: "POST",
+    body: JSON.stringify({
+      name,
+      email,
+      service: selectedService
+    }),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+
+  step2.classList.add("hidden");
+  step3.classList.remove("hidden");
+
+  // 🔥 LOAD CALENDLY PROPERLY
+  calendly.src = selectedLink +
+    "?name=" + encodeURIComponent(name) +
+    "&email=" + encodeURIComponent(email);
+
+});
+
+// 🔥 MENU FIX
+const menuBtn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+});
+</script>
 
 </body>
 </html>
